@@ -17,3 +17,6 @@ def create_task(db: Session, title:str, user_id: int):
     db.commit()
     db.refresh(db_task)
     return db_task
+
+def get_tasks_by_user(db: Session, user_id: int):
+    return db.query(models.Task).filter(models.Task.owner_id == user_id).all()

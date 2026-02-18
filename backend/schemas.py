@@ -1,6 +1,6 @@
 from typing import Optional
 from pydantic import BaseModel
-
+from typing import List
 
 class UserCreate(BaseModel):
     email:str
@@ -15,4 +15,6 @@ class TaskResponse(BaseModel):
     complete: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True   # (Pydantic v2)
+        # If using Pydantic v1, use:
+        # orm_mode = True

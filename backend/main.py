@@ -4,6 +4,7 @@ from backend import database
 from backend.database import engine
 from backend.routers import user
 from backend.routers import task
+from backend.services import task_service
 
 
 models.Base.metadata.create_all(bind=engine)

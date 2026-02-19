@@ -7,7 +7,7 @@ from backend.routers import task
 from backend.services import task_service
 
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
